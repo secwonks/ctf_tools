@@ -14,9 +14,7 @@ def main():
     args = parser.parse_args()
     
     hexstr = args.input
-    filename = hexstr[:12]
-    extension = ".bin"
-    filename = filename + extension
+    filename = hexstr[:12]+".bin"
     data = hexstr.decode('hex')
     filehandle = open(filename, "wb")
     filehandle.write(data)
