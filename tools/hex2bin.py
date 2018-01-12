@@ -14,13 +14,15 @@ def main():
     args = parser.parse_args()
     
     hexstr = args.input
-    filename = raw_input('Enter file name: ')
+    filename = hexstr[:12]
     extension = ".bin"
     filename = filename + extension
     data = hexstr.decode('hex')
     filehandle = open(filename, "wb")
     filehandle.write(data)
     filehandle.close()
+
+    print "\n[*] Saved " +filename
 
 if __name__ == '__main__':
     main()
