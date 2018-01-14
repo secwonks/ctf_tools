@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-"""Decode user provided HEX string into binary data and write it to a file for analysis"""
-
-__author__ = "Wayland Morgan"
-__email__ = "dotwayland@gmail.com"
-__date__ = "20171206"
-
 import argparse
+
+__author__ = 'Wayland Morgan'
+__date__ = '20171206'
+__email__ = 'dotwayland@gmail.com'
+__description__ = 'Decode user provided hex string into binary data and write it to a file for analysis'
 
 def main():
     parser = argparse.ArgumentParser()
@@ -16,9 +15,8 @@ def main():
     hexstr = args.input
     filename = hexstr[:12]+".bin"
     data = hexstr.decode('hex')
-    filehandle = open(filename, "wb")
-    filehandle.write(data)
-    filehandle.close()
+    with open(filename, "wb") as filehandle:
+        filehandle.write(data)
 
     print "\n[*] Saved " +filename
 
