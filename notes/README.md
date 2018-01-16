@@ -7,3 +7,4 @@
   * [MetaSploitable](https://github.com/rapid7/metasploitable3/wiki)
   * [CTFTime](https://ctftime.org/ctfs)
   * [/r/securityCTF](https://www.reddit.com/r/securityCTF/)
+  * [Challenge Links from Blackroom Security](http://www.blackroomsec.com/updated-hacking-challenge-site-links/)
